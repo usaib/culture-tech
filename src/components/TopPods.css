@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.topPods{
+    background-color: #1B1E23;
+    padding: 50px;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.topPodsImage{
+    padding: 20px;
+    height: 170px;
+    width:190px;
+    position: relative;
+      top: 0;
+      left: 0;
+}
+
+.playButton{
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    width: 50px;
+    background-color:white;
+    border-radius:20%;
+    text-align: center;
+    margin: auto;
+    padding: 9px ;
+}
+
+.title{
+    color:white
+}
+
+.author{
+    color:rgb(134, 134, 134)
+}
+
+.playzy{
+    width: 60%;
+    background-color:rgb(248, 245, 245);
+    border-radius:30px;
+    text-align: center;
+    position: absolute;
+    top:80%;
+    left: 25%;
+    padding: 9px ;
+}
+
+.modalB{
+    margin-top:50px;
+}

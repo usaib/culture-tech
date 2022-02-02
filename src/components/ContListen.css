@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@100;200;300;400&family=Poppins:wght@300&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.ContListenMain{
+    background-color: #1B1E23;
+    padding: 40px;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.contContainer{
+    border:0.5px Solid white;
+     margin: 20px;
+    border-radius:10px;
+    padding: 30px;
+}
+
+.contCard{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: left;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    
+    
+}
+
+.contImg{
+    align-items: left;
+    height: 100px;
+    width:100px;
+    display:inline-block;
+}
+
+.cardContent{
+    width:100%;
+    margin: auto;
+    text-align: left;
+    padding: 20px;
+}
+
+.cardButtons{
+    float: right;
+    
+}
+
+.playssButton{
+    background-color:white;
+    text-align: center;
+    border-radius:20%;
+   
+    /* padding:6px 8px; */
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    
+}
+
+.addPlaylist{
+    background-color:white;
+    text-align: center;
+    border-radius:20%;
+
+    height: 50px;
+    width: 50px;
+    /* padding:8px 10px; */
+    display: inline-block;
+    
+}

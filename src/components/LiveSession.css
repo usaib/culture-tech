@@ -1,0 +1,13 @@
+.LiveSessionMain{
+    background-color: #1B1E23;
+    padding: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+.LiveContainer{
+    border:0.5px Solid white;
+    margin: 20px;
+   border-radius:10px;
+   padding: 30px;
+}

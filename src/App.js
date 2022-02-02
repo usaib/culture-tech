@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Routes
+} from "react-router-dom";
+import { ThemeProvider } from "@mui/styles";
+import Documentary from "./screens/documentry"
+import {Homepage} from "./screens/Homepage"
+import Podcast from "./screens/podcast"
+import { theme } from "./theme/theme";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <Routes>
+        <Route path="/" element={<Homepage />} />
+          <Route exact path="/documentaries" element={<Documentary />} />
+          <Route path="/podcasts" element={<Podcast />} />
+        </Routes>
+      </ThemeProvider>
+    </Router>
   );
 }
-
-export default App;
