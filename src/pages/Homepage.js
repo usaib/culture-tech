@@ -16,9 +16,9 @@ import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import EastIcon from "@mui/icons-material/East";
+import ElevateAppBar from "../components/Appbar";
+import { Drawer } from "../components/Drawer";
 import {
 	useStyles,
 	carouselImages,
@@ -30,14 +30,15 @@ import {
 	pricingCards,
 	footerLinks
 } from "../styles/homepageStyles";
+import { Footer } from "../components/Footer";
 import { Autoplay, Navigation, Pagination, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import ElevateAppBar from "../components/Appbar";
-import { Drawer } from "../components/Drawer";
-
+import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import TwitterIcon from "@mui/icons-material/Twitter";
 export const Homepage = () => {
 	const classes = useStyles();
 	const [drawerOpen, setDrawerOpen] = useState(true);
@@ -52,7 +53,7 @@ export const Homepage = () => {
 				component="main"
 				sx={{
 					flexGrow: 1,
-					p: 0,
+					p: 3,
 					width: { sm: `calc(100% - ${180}px)` },
 					padding: "0"
 				}}
@@ -60,7 +61,7 @@ export const Homepage = () => {
 				<CssBaseline />
 
 				<Container
-					maxWidth="1800px"
+					maxWidth="lg"
 					sx={{
 						minHeight: "550px",
 						paddingTop: "100px",
@@ -72,20 +73,21 @@ export const Homepage = () => {
 					<Grid container sx={{ alignItems: "center" }}>
 						<Grid item lg={5} xs={12}>
 							<Box component="div" className={classes.leftHead}>
-								<Fade left>
+								<Fade top>
 									<Typography className={classes.headingOne} component="h2">
 										Expreience The Way Of Life
 									</Typography>
 
 									<Typography className={classes.paragraph} component="span">
-										Lorem Ipsum is simply dummy text of the printing and
-										typesetting industry. Lorem Ipsum has been the
-										industry.printing and typesetting industry.
+										Danse World is a virtual association between a group of
+										performing and fitness arts professionals and an information
+										resource centre for all teachers, professionals, and
+										students.
 									</Typography>
 								</Fade>
-								<Fade bottom>
+								<Fade left>
 									<Button variant="contained" className={classes.homeBtn}>
-										Lorem Ipsum
+										Discover <EastIcon sx={{ marginLeft: "5px" }} />
 									</Button>
 								</Fade>
 							</Box>
@@ -130,7 +132,7 @@ export const Homepage = () => {
 					</Grid>
 				</Container>
 				<Container
-					maxWidth="1800px"
+					maxWidth="lg"
 					sx={{ marginBottom: "30px", position: "relative" }}
 				>
 					<Fade left>
@@ -207,7 +209,7 @@ export const Homepage = () => {
 											margin: "0 auto 0 auto"
 										}}
 									>
-										A Heading will be here
+										What we have for you
 									</Typography>
 								</Stack>
 							</Fade>
@@ -227,27 +229,32 @@ export const Homepage = () => {
 												marginBottom: "50px",
 												marginTop: "50px"
 											}}
+											key={card.title}
 										>
-											<Paper className={classes.card} elevation={0}>
-												<Stack spacing={2}>
-													<Paper
-														elevation={0}
-														sx={{
-															background: `url(${card.image})`,
-															backgroundRepeat: "no-repeat",
-															backgroundSize: "50px",
-															height: "80px",
-															backgroundPosition: "center center"
-														}}
-													/>
-													<Typography className={classes.cardTitle}>
-														{card.title}
-													</Typography>
-													<Typography className={classes.cardDes}>
-														{card.description}
-													</Typography>
-												</Stack>
-											</Paper>
+											{/* documentry aur podcast k card ko route karwa dena unke
+                      pages pe */}
+											<Link href="#" sx={{ textDecoration: "none" }}>
+												<Paper className={classes.card} elevation={0}>
+													<Stack spacing={2}>
+														<Paper
+															elevation={0}
+															sx={{
+																background: `url(${card.image})`,
+																backgroundRepeat: "no-repeat",
+																backgroundSize: "50px",
+																height: "80px",
+																backgroundPosition: "center center"
+															}}
+														/>
+														<Typography className={classes.cardTitle}>
+															{card.title}
+														</Typography>
+														<Typography className={classes.cardDes}>
+															{card.description}
+														</Typography>
+													</Stack>
+												</Paper>
+											</Link>
 											{/* <Paper className={classes.backCard} elevation={0}></Paper> */}
 										</Grid>
 									))}
@@ -258,7 +265,7 @@ export const Homepage = () => {
 				</Container>
 				<Slide bottom>
 					<Container
-						maxWidth="1800px"
+						maxWidth="lg"
 						sx={{
 							backgroundColor: "#1B1E23",
 							marginTop: "30px",
@@ -299,7 +306,7 @@ export const Homepage = () => {
 						>
 							<Grid container sx={{ justifyContent: "space-around" }}>
 								{Documentaries.map((doc) => (
-									<SwiperSlide>
+									<SwiperSlide key={doc.title}>
 										<Grid item xs={12}>
 											<Paper
 												elevation={0}
@@ -361,7 +368,7 @@ export const Homepage = () => {
 					</Container>
 				</Slide>
 				<Container
-					maxWidth="1800px"
+					maxWidth="lg"
 					sx={{
 						marginTop: "30px",
 						padding: "30px 10px"
@@ -460,7 +467,7 @@ export const Homepage = () => {
 					</Grid>
 				</Container>
 				<Container
-					maxWidth="1800px"
+					maxWidth="lg"
 					sx={{
 						marginTop: "30px",
 						padding: "30px 10px",
@@ -636,10 +643,10 @@ export const Homepage = () => {
 											textAlign: "left"
 										}}
 									>
-										Lorem Ipsum is simply dummy text of the printing and
-										typesetting industry. Lorem Ipsum has been the
-										industry.printing and typesetting industry. Lorem Ipsum has
-										been the industry.
+										Being cultural custodian, we will archive regional and
+										national culture and folks as well as bring the hidden and
+										lost talents to the surface and provide recognition to them
+										by making documentaries, managing creative tourism etc
 									</Typography>
 								</Fade>
 							</Stack>
@@ -647,7 +654,7 @@ export const Homepage = () => {
 					</Grid>
 				</Container>
 				<Container
-					maxWidth="1800px"
+					maxWidth="lg"
 					sx={{
 						backgroundColor: "#1B1E23",
 						padding: "30px 10px",
@@ -726,6 +733,7 @@ export const Homepage = () => {
 																	background: "rgba(237, 112, 20, 0.81)"
 																}
 															}}
+															href={pod.link}
 														>
 															<PlayArrowIcon sx={{ color: "#D16002" }} />
 														</Button>
@@ -765,7 +773,7 @@ export const Homepage = () => {
 					</Grid>
 				</Container>
 				<Container
-					maxWidth="1800px"
+					maxWidth="lg"
 					sx={{
 						backgroundColor: "rgb(96, 169, 255)",
 						padding: { md: "1.5em 0em ", xs: "1.5em 0em !important" },
@@ -798,7 +806,7 @@ export const Homepage = () => {
 					>
 						<Grid container>
 							{pricingCards.map((card) => (
-								<Grid item md={4} xs={12}>
+								<Grid item md={4} xs={12} key={card.planName}>
 									<Stack
 										className={classes.priceCard}
 										sx={{
@@ -915,9 +923,9 @@ export const Homepage = () => {
 									sx={{ fontSize: "1em !important", textAlign: "justify" }}
 								>
 									{" "}
-									Lorem Ipsum is simply dummy text of the printing and
-									typesetting industry. Lorem Ipsum has been the
-									industry.printing and typesetting industry.
+									Danse World will be committed to providing the best education
+									and educators available while also providing an environment
+									that will foster new initiatives and unions.
 								</Typography>
 							</Stack>
 						</Grid>
