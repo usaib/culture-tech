@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   Container,
   Grid,
@@ -6,29 +7,27 @@ import {
   Typography,
   Box,
   Stack,
-  List,
-  ListItem,
 } from "@mui/material";
-import { Link } from "react-router-dom";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import Footer from "../components/Footer";
+import { useStyles } from "../styles/documentaryStyles";
+
 import { Featured } from "../components/FeaturedVideos";
 import { AllDocumentaries } from "../components/AllDocs";
-import { featuredVideos, allDocs } from "../styles/documentaryStyles";
-import { useStyles } from "../styles/documentaryStyles";
+import { allDocs } from "../styles/documentaryStyles";
 import { Helmet } from "react-helmet";
+import Footer from "../components/Footer";
 import ElevateAppBar from "../components/Appbar";
 import { Drawer } from "../components/Drawer";
+export const Category = ({ ctg, setData, setOpen }) => {
+  const documents = allDocs.filter(({ data, category }) => {
+    return category === ctg;
+  });
 
-export default function Documentry({ setOpen, setCategory, setData }) {
+  const featuredVideo = documents[0].data[0].payload[0];
+  const classes = useStyles();
   const [drawerOpen, setDrawerOpen] = React.useState(true);
   const toggleDrawer = () => {
     setDrawerOpen((prevState) => !prevState);
   };
-  function sendData(ctg) {
-    setCategory(ctg);
-  }
-  const classes = useStyles();
   return (
     <React.Fragment>
       <Helmet>
@@ -51,30 +50,21 @@ export default function Documentry({ setOpen, setCategory, setData }) {
           <Container maxWidth="xl" sx={{ padding: "65px 0 0 0 !important" }}>
             <Stack>
               <Grid container>
-                {featuredVideos.map((item, key) => (
-                  <Grid item xs={12} key={key}>
-                    <Featured
-                      featurevideo={item}
-                      setOpen={setOpen}
-                      setData={setData}
-                    />
-                  </Grid>
-                ))}
+                <Grid item xs={12}>
+                  <Featured
+                    featurevideo={featuredVideo}
+                    setOpen={setOpen}
+                    setData={setData}
+                  />
+                </Grid>
               </Grid>
             </Stack>
           </Container>
           <Container maxWidth="xl" sx={{ padding: { xl: 0 } }}>
-            {allDocs.map((doc, key) => (
+            {documents[0].data.map((doc, key) => (
               <Stack
                 sx={{
                   margin: { xl: "2vw 0", xs: "2vw 1.5vw" },
-                  position: "relative",
-                  "&:hover": {
-                    "& a": {
-                      opacity: 1,
-                      transform: "translateX(0px)",
-                    },
-                  },
                 }}
                 key={key}
               >
@@ -91,36 +81,20 @@ export default function Documentry({ setOpen, setCategory, setData }) {
                     >
                       <Typography variant="h3" className={classes.ctg}>
                         {" "}
-                        {doc.category}
+                        {doc.subCtg}
                       </Typography>
-                      <Link
-                        className={classes.ctgExp}
-                        to={`/documentary/${doc.category}`}
-                        onClick={() => {
-                          sendData(doc.category);
-                        }}
-                      >
-                        Explore All{" "}
-                        <ChevronRightIcon
-                          sx={{
-                            position: "relative",
-                            top: "5.7px",
-                            left: "-8px",
-                            color: "#fff",
-                            fontSize: "1.3rem",
-                          }}
-                        />{" "}
-                      </Link>
                     </Box>
                   </Grid>
                 </Grid>
+
                 <Grid
                   container
                   sx={{
                     transition: "all 0.5s ease-in-out",
                   }}
+                  className="container"
                 >
-                  {doc.data[0].payload.map((item, key) => (
+                  {doc.payload.map((item, key) => (
                     <Grid
                       item
                       sx={{
@@ -146,4 +120,4 @@ export default function Documentry({ setOpen, setCategory, setData }) {
       </Box>
     </React.Fragment>
   );
-}
+};
