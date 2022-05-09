@@ -6,6 +6,7 @@ import ContListen from "../components/ContListen";
 import LiveSession from "../components/LiveSession";
 import ElevateAppBar from "../components/Appbar";
 import { Drawer } from "../components/Drawer";
+import { Helmet } from "react-helmet";
 
 function Podcasts() {
 	const [drawerOpen, setDrawerOpen] = useState(true);
@@ -14,6 +15,9 @@ function Podcasts() {
 	};
 	return (
 		<div>
+			<Helmet>
+				<title>Podcasts | DancePakistan</title>
+			</Helmet>
 			<ElevateAppBar toggleDrawer={toggleDrawer} isDrawerOpen={drawerOpen} />
 			<Drawer open={drawerOpen} />
 			<Fragment>

@@ -38,7 +38,7 @@ export default makeStyles((theme) => ({
 	//Drawer Link Styles
 
 	linkActive: {
-		backgroundColor: "theme.palette.background.dark"
+		backgroundColor: "#FFF"
 	},
 	linkIcon: {
 		color: theme.palette.text.secondary,
@@ -47,7 +47,7 @@ export default makeStyles((theme) => ({
 		justifyContent: "center"
 	},
 	linkIconActive: {
-		color: theme.palette.primary.main
+		color: "#D16002"
 	},
 	linkText: {
 		color: theme.palette.text.secondary,
@@ -61,7 +61,7 @@ export default makeStyles((theme) => ({
 		}
 	},
 	linkTextActive: {
-		color: "black"
+		color: "#D16002"
 	},
 	linkTextHidden: {
 		opacity: 0

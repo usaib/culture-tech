@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import makeStyles from "./styles";
 import clsx from "clsx";
-import { Drawer, List } from "@mui/material";
+import { Divider, Drawer, List } from "@mui/material";
 import DrawerList from "./DrawerList";
 import Cart from "./carts.png";
 import User from "./man.png";
@@ -9,54 +9,57 @@ import Vendor from "./provision.png";
 import { Home } from "@mui/icons-material";
 import WriteIcon from "@mui/icons-material/RateReview";
 import TvIcon from "@mui/icons-material/LiveTvSharp";
-const vendorList = [
+import HelpIcon from "@mui/icons-material/HelpOutlineRounded";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import { matchPath, useLocation, Link } from "react-router-dom";
+import classnames from "classnames";
+import logo from "../../assets/logo.jpeg";
+const list = [
 	{
-		href: "/app/dashboard/home",
+		href: "/",
 		icon: Home,
 		title: "Home"
 	},
 	{
-		href: "/app/dashboard/podcasts",
+		href: "/app/podcasts",
 		icon: WriteIcon,
 		title: "Podcasts"
 	},
 	{
-		href: "/app/dashboard/liveSessions",
+		href: "/Documentries",
 		icon: TvIcon,
-		title: "Live Sessions"
+		title: "Documentries"
 	}
 ];
 function DrawerWrapper({ open }) {
-	const role = localStorage.getItem("role");
 	const classes = makeStyles();
+	const location = useLocation();
+	const isLinkActive = "/AboutUs"
+		? !!matchPath(
+				{
+					path: "/AboutUs",
+					end: false
+				},
+				location.pathname
+		  )
+		: false;
 
-	const renderSideBar = (role) => {
-		if (role == "admin") {
-			return vendorList.map((sidebar) => {
-				return (
-					<DrawerList
-						href={sidebar.href}
-						key={sidebar.title}
-						title={sidebar.title}
-						icon={sidebar.icon}
-						isSidebarOpen={open}
-					/>
-				);
-			});
-		} else {
-			return vendorList.map((sidebar) => {
-				return (
-					<DrawerList
-						href={sidebar.href}
-						key={sidebar.title}
-						title={sidebar.title}
-						icon={sidebar.icon}
-						isSidebarOpen={open}
-					/>
-				);
-			});
-		}
+	const renderSideBar = () => {
+		return list.map((sidebar) => {
+			return (
+				<DrawerList
+					href={sidebar.href}
+					key={sidebar.title}
+					title={sidebar.title}
+					icon={sidebar.icon}
+					isSidebarOpen={open}
+				/>
+			);
+		});
 	};
+
 	return (
 		<div>
 			<Drawer
@@ -73,8 +76,47 @@ function DrawerWrapper({ open }) {
 					})
 				}}
 			>
+				<img src={logo}></img>
 				<div className={classes.DrawerListItems}></div>
-				<List>{renderSideBar(role)}</List>
+
+				<List>{renderSideBar()}</List>
+				<List
+					sx={{
+						backgroundColor: "#fff",
+						marginTop: 10
+					}}
+				>
+					<ListItem
+						className={classes.link}
+						component={Link}
+						to={"/AboutUs"}
+						classes={{
+							root: classnames(classes.linkRoot, {
+								[classes.linkActive]: isLinkActive
+							})
+						}}
+						disableRipple
+						button
+					>
+						<ListItemIcon
+							className={classnames(classes.linkIcon, {
+								[classes.linkIconActive]: isLinkActive
+							})}
+						>
+							<HelpIcon sx={{ color: "#2A3D53" }} />
+						</ListItemIcon>
+
+						<ListItemText
+							classes={{
+								primary: classnames(classes.linkText, {
+									[classes.linkTextActive]: isLinkActive,
+									[classes.linkTextHidden]: !true
+								})
+							}}
+							primary={"About Us"}
+						/>
+					</ListItem>
+				</List>
 			</Drawer>
 		</div>
 	);

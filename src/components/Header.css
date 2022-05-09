@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@100;200;300;400&family=Poppins:wght@300&display=swap");
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+.headerimg {
+	height: 600px;
+	width: 100%;
+}
+.myheader {
+	display: flex;
+	flex-direction: column;
+	margin-top: 70px;
+	margin-left: 180px;
+}

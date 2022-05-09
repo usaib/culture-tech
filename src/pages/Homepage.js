@@ -39,6 +39,7 @@ import "swiper/css/pagination";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { Helmet } from "react-helmet";
 export const Homepage = () => {
 	const classes = useStyles();
 	const [drawerOpen, setDrawerOpen] = useState(true);
@@ -47,6 +48,9 @@ export const Homepage = () => {
 	};
 	return (
 		<Box sx={{ display: "flex" }}>
+			<Helmet>
+				<title>Home | DancePakistan</title>
+			</Helmet>
 			<ElevateAppBar toggleDrawer={toggleDrawer} isDrawerOpen={drawerOpen} />
 			<Drawer open={drawerOpen} />
 			<Box
@@ -176,7 +180,7 @@ export const Homepage = () => {
 											top: "-40px",
 											left: "25%",
 											transform: "translateX(-25%)",
-											backgroundColor: " #D16002",
+											backgroundColor: "#D16002",
 											content: "''",
 											height: "15px",
 											width: "15px",

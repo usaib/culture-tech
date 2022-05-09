@@ -19,16 +19,16 @@ import culture1 from "../assets/culture1.jpg";
 import culture2 from "../assets/culture2.jpg";
 import culture3 from "../assets/culture3.jpg";
 import mic from "../assets/mic.png";
-import pod1 from "../assets/lollipop.jpg";
-import pod2 from "../assets/cone.jpg";
-import pod3 from "../assets/cherry.jpg";
-import pod4 from "../assets/flower.jpg";
-import pod5 from "../assets/guava.jpg";
-import pod6 from "../assets/orange.jpg";
+import pod1 from "../assets/podcast1.jpeg";
+import pod2 from "../assets/podcast2.jpeg";
+import pod3 from "../assets/podcast3.jpeg";
+import pod4 from "../assets/podcast4.jpeg";
+import pod5 from "../assets/podcast5.jpeg";
 import icon1 from "../assets/icon1.png";
 import icon2 from "../assets/icon2.png";
 import icon3 from "../assets/icon3.png";
-
+import DocImage1 from "../assets/DocImage1.jpeg";
+import DocImage2 from "../assets/DocImage2.jpeg";
 export const useStyles = makeStyles((theme) => {
 	return {
 		header: {
@@ -429,7 +429,8 @@ export const Documentaries = [
 export const cards = [
 	{
 		title: "Documentary",
-		description: "Engrossed listening. Park gate sell they west hard for the",
+		description:
+			"Through our documentaries you can explore the traditional culture of pakistan",
 		image: DocImg
 	},
 	{
@@ -455,34 +456,35 @@ export const cards = [
 ];
 export const podcards = [
 	{
-		author: "Gabe William",
-		description: "Engrossed listening. Park gate sell they west hard for the",
-		image: pod1
+		author: "Farooq Chaudhry",
+		description: "Leading from a Distance with Farooq Chaudhry OBE",
+		image: pod1,
+		link: "https://www.youtube.com/watch?v=G7Co9AgvZ3w"
 	},
 	{
-		author: "Gabe William",
-		description: "Engrossed listening Park gate engrossed listening Park?",
-		image: pod2
+		author: "Zara Noor",
+		description: "Power of a single decision | TEDxGCULahore",
+		image: pod2,
+		link: "https://www.youtube.com/watch?v=pdInEBhUAKU"
 	},
 	{
-		author: "Gabe William",
-		description: "Engrossed listening Park gate engrossed listening Park?",
-		image: pod3
+		author: "Ayesha Siddique Khan",
+		description: "How technology has advanced feminism in Pakistan ",
+		image: pod3,
+		link: "https://www.youtube.com/watch?v=Vv6vBwNMfbU"
 	},
 	{
-		author: "Gabe William",
-		description: "Engrossed listening Park gate engrossed listening Park?",
-		image: pod4
+		author: "Nahid Siddiqui",
+		description:
+			"Nahid Siddiqui Guru of Kathak in conversation with Sophia Khan",
+		image: pod4,
+		link: "https://www.youtube.com/watch?v=52zd5S7CcBo&t=4s"
 	},
 	{
-		author: "Gabe William",
-		description: "Engrossed listening Park gate engrossed listening Park?",
-		image: pod5
-	},
-	{
-		author: "Gabe William",
-		description: "Engrossed listening Park gate engrossed listening Park?",
-		image: pod6
+		author: "Farooq Chaudhry",
+		description: "International Business Festival 2018",
+		image: pod5,
+		link: "https://www.youtube.com/watch?v=42-I4V9ymYs"
 	}
 ];
 
@@ -520,3 +522,77 @@ export const footerLinks = [
 	},
 	{ secTitle: "Blog", Links: ["Research", "News"] }
 ];
+export const featureData = [
+	{
+		icon: "Explore",
+		heading: "Explore",
+		description:
+			"Through our documentaries you can explore the traditional culture of pakistan"
+	},
+	{
+		icon: "Lightbulb",
+		heading: "Know",
+		description:
+			"Get to know all the cultures and lifestylesof different areas and their people"
+	},
+	{
+		icon: "LocalLibrary",
+		heading: "Learn",
+		description:
+			"Through our documentaries you can explore the traditional culture of pakistan"
+	}
+];
+export const featuredVideos = [
+	{
+		imag: SkarduImage,
+		heading: "History Of Skardu",
+		description:
+			"Skardu is a city located in Gilgit Baltistan, Pakistan, and serves as the capital of the Skardu District. Skardu is situated at an elevation of nearly 2,500 metres in the Skardu Valley, at the confluence of the Indus and Shigar Rivers.",
+		date: "20 October 2020"
+	},
+	{
+		imag: kachuraImage,
+		heading: "Beauty of Kachura Lake",
+		description:
+			"Skardu is a city located in Gilgit Baltistan, Pakistan, and serves as the capital of the Skardu District. Skardu is situated at an elevation of nearly 2,500 metres in the Skardu Valley, at the confluence of the Indus and Shigar Rivers.",
+		date: "20 October 2020"
+	},
+	{
+		imag: sitarImage,
+		heading: "Cultural Music of Pakistan",
+		description:
+			"Skardu is a city located in Gilgit Baltistan, Pakistan, and serves as the capital of the Skardu District. Skardu is situated at an elevation of nearly 2,500 metres in the Skardu Valley, at the confluence of the Indus and Shigar Rivers.",
+		date: "20 October 2020"
+	},
+	{
+		imag: planeImage,
+		heading: "History Of Shigar Fort",
+		description:
+			"Skardu is a city located in Gilgit Baltistan, Pakistan, and serves as the capital of the Skardu District. Skardu is situated at an elevation of nearly 2,500 metres in the Skardu Valley, at the confluence of the Indus and Shigar Rivers.",
+		date: "20 October 2020"
+	}
+];
+export const allDocs = [
+	{
+		image: planeImage,
+		heading: "The Plane Restaurant",
+		description:
+			"Skardu is a city located in Gilgit Baltistan, Pakistan, and serves as the capital of the Skardu District. Skardu is situated at an elevation of nearly 2,500 metres in the Skardu Valley, at the confluence of the Indus and Shigar Rivers.",
+		date: "20 October 2020"
+	},
+	{
+		image: sitarImage,
+		heading: "Sitar In Mountains",
+		description:
+			"Skardu is a city located in Gilgit Baltistan, Pakistan, and serves as the capital of the Skardu District. Skardu is situated at an elevation of nearly 2,500 metres in the Skardu Valley, at the confluence of the Indus and Shigar Rivers.",
+		date: "20 October 2020"
+	},
+	{
+		image: kachuraImage,
+		heading: "The River Tale",
+		description:
+			"Skardu is a city located in Gilgit Baltistan, Pakistan, and serves as the capital of the Skardu District. Skardu is situated at an elevation of nearly 2,500 metres in the Skardu Valley, at the confluence of the Indus and Shigar Rivers.",
+		date: "20 October 2020"
+	}
+];
+export const DocumentaryImages = [DocImage1, DocImage2];

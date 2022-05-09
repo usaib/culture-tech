@@ -24,6 +24,7 @@ import { Autoplay, Navigation, Pagination, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Helmet } from "react-helmet";
 import "swiper/css/pagination";
 import ElevateAppBar from "../components/Appbar";
 import { Drawer } from "../components/Drawer";
@@ -38,6 +39,9 @@ export default function Documentry() {
 	};
 	return (
 		<React.Fragment>
+			<Helmet>
+				<title>Documentries | DancePakistan </title>
+			</Helmet>
 			<Box sx={{ display: "flex", overflow: "hidden", padding: 0, margin: 0 }}>
 				<ElevateAppBar toggleDrawer={toggleDrawer} isDrawerOpen={drawerOpen} />
 				<Drawer open={drawerOpen} />
