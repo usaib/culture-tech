@@ -5,7 +5,7 @@ import Documentry from "./pages/Documentry";
 import SeeAll from "./components/SeeAll";
 import SeeAllSubs from "./components/SeeAllSubs";
 import Header from "./components/Header";
-import VirtualStudio from "./components/VirtualStudio";
+import VirtualStudios from "./pages/VirtualStudios";
 import TopDanceTourism from "./components/TopDanceTourism";
 import DanceTourism from "./pages/DanceTourism";
 
@@ -50,6 +50,7 @@ function App() {
             path="app/DanceTourism"
             element={<DanceTourism setCategory={setCategory} />}
           />
+
           {category && (
             <Route
               path="app/DanceTourism/:category"
@@ -59,18 +60,22 @@ function App() {
             />
           )}
           <Route
+            path="app/virtualStudio"
+            element={<VirtualStudios setCategory={setCategory} />}
+          />
+          {/* <Route
             exact
-            path="/virtualStudio"
+            path="/app/virtualStudio"
             element={
               <>
                 <Header
                   title={"VIRTUAL STUDIO"}
                   image={require("./Images/studio.jpg")}
                 />
-                <VirtualStudio></VirtualStudio>
+                <VirtualStudios></VirtualStudios>
               </>
             }
-          />
+          /> */}
           <Route
             path="/documentary/:category"
             element={

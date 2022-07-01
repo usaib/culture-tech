@@ -46,12 +46,7 @@ const list = [
     title: "DanceTourism",
   },
   {
-    href: "/DanceTourism",
-    icon: TourIcon,
-    title: "TopDanceTourism",
-  },
-  {
-    href: "/virtualStudio",
+    href: "/app/virtualStudio",
     icon: MicIcon,
     title: "VirtualStudio",
   }
