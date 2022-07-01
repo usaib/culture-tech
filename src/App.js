@@ -46,18 +46,18 @@ function App() {
           />
           <Route exact path="/SeeAll" element={<SeeAll />} />
           <Route exact path="/SeeAllSubs" element={<SeeAllSubs />} />
-          <Route path="app/DanceTourism" element={<DanceTourism />} />
           <Route
-            path="app/DanceTourism/:category"
-            element={
-              <Documentry
-                setOpen={setOpen}
-                setData={setData}
-                setCategory={setCategory}
-              />
-            }
+            path="app/DanceTourism"
+            element={<DanceTourism setCategory={setCategory} />}
           />
-
+          {category && (
+            <Route
+              path="app/DanceTourism/:category"
+              element={
+                <Category setOpen={setOpen} setData={setData} ctg={category} />
+              }
+            />
+          )}
           <Route
             exact
             path="/virtualStudio"

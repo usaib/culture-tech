@@ -3,9 +3,13 @@ import "./SeeAllSubs.css";
 import "./TopDanceTourism.css";
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
-import TabContext from "@material-ui/lab/TabContext";
-import TabList from "@material-ui/lab/TabList";
-import TabPanel from "@material-ui/lab/TabPanel";
+// import TabContext from "@material-ui/lab/TabContext";
+// import TabList from "@material-ui/lab/TabList";
+// import TabPanel from "@material-ui/lab/TabPanel";
+import { TabPanel } from "@mui/lab";
+import { TabList } from "@mui/lab";
+import { TabContext } from "@mui/lab";
+
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";

@@ -9,20 +9,37 @@ import {
   Stack,
 } from "@mui/material";
 import { useStyles } from "../styles/documentaryStyles";
-
+import { allDanceDocs } from "../styles/dancetourismStyles";
 import { Featured } from "../components/FeaturedVideos";
-import { AllDocumentaries } from "../components/Alldocs";
+import { AllDocumentaries } from "../components/AllDocs";
 import { allDocs } from "../styles/documentaryStyles";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import ElevateAppBar from "../components/Appbar";
 import { Drawer } from "../components/Drawer";
 export const Category = ({ ctg, setData, setOpen }) => {
-  console.log(ctg);
-  const documents = allDocs.filter(({ data, category }) => {
-    return category === ctg;
-  });
-  console.log(documents);
+  var documents;
+  if (
+    [
+      "National",
+      "Regional",
+      "Mountainous",
+      "Tribal Dances",
+      "Tour on Demand",
+    ].some((a) => a === ctg)
+  ) {
+    documents = allDanceDocs.filter(({ data, category }) => {
+      return category === ctg;
+    });
+    console.log(documents);
+    console.log("in-1st-if");
+  } else {
+    documents = allDocs.filter(({ data, category }) => {
+      return category === ctg;
+    });
+    console.log("in else");
+  }
+  console.log("category==>", ctg);
 
   const featuredVideo = documents[0].data[0].payload[0];
   const classes = useStyles();

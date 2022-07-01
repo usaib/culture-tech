@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Footer from "../components/Footer";
 import { Featured } from "../components/FeaturedVideos";
-import { AllDocumentaries } from "../components/Alldocs";
+import { AllDocumentaries } from "../components/AllDocs";
 import { featuredVideos, allDocs } from "../styles/documentaryStyles";
 import { useStyles } from "../styles/documentaryStyles";
 import { Helmet } from "react-helmet";

@@ -13,8 +13,8 @@ import { Link } from "react-router-dom";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Footer from "../components/Footer";
 import { Featured } from "../components/FeaturedVideos";
-import { AllDocumentaries } from "../components/Alldocs";
-import { featuredVideos, allDocs } from "../styles/dancetourismStyles";
+import { AllDocumentaries } from "../components/AllDocs";
+import { featuredVideos, allDanceDocs } from "../styles/dancetourismStyles";
 import { useStyles } from "../styles/documentaryStyles";
 import { Helmet } from "react-helmet";
 import ElevateAppBar from "../components/Appbar";
@@ -64,7 +64,7 @@ export default function Documentry({ setOpen, setCategory, setData }) {
             </Stack>
           </Container>
           <Container maxWidth="xl" sx={{ padding: { xl: 0 } }}>
-            {allDocs.map((doc, key) => (
+            {allDanceDocs.map((doc, key) => (
               <Stack
                 sx={{
                   margin: { xl: "2vw 0", xs: "2vw 1.5vw" },

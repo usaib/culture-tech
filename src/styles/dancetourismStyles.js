@@ -130,7 +130,7 @@ export const featuredVideos = [
   },
 ];
 
-export const allDocs = [
+export const allDanceDocs = [
   {
     category: "National",
     data: [
