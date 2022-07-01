@@ -14,7 +14,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Footer from "../components/Footer";
 import { Featured } from "../components/FeaturedVideos";
 import { AllDocumentaries } from "../components/Alldocs";
-import { featuredVideos, allDocs } from "../styles/documentaryStyles";
+import { featuredVideos, allDocs } from "../styles/dancetourismStyles";
 import { useStyles } from "../styles/documentaryStyles";
 import { Helmet } from "react-helmet";
 import ElevateAppBar from "../components/Appbar";
@@ -32,7 +32,7 @@ export default function Documentry({ setOpen, setCategory, setData }) {
   return (
     <React.Fragment>
       <Helmet>
-        <title>Documentries | DancePakistan </title>
+        <title>Dance Tourism | DancePakistan </title>
       </Helmet>
       <Box sx={{ display: "flex", overflow: "hidden", padding: 0, margin: 0 }}>
         <ElevateAppBar toggleDrawer={toggleDrawer} isDrawerOpen={drawerOpen} />

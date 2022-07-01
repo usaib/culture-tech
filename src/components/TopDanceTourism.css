@@ -1,0 +1,20 @@
+.DTMain{
+	background-color: #1b1e23;
+	padding: 40px;
+	justify-content: center;
+	text-align: center;
+	margin-left: 180px;
+    
+}
+
+.DTContainer{
+    /* border:0.5px Solid white;
+    margin: 20px;
+   border-radius:10px;
+   padding: 30px;
+   margin-bottom: 100px; */
+   border: 0.5px Solid white;
+   margin: 20px;
+   border-radius: 10px;
+   padding: 30px;
+}

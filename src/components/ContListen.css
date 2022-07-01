@@ -12,21 +12,24 @@ body {
 	margin-left: 180px;
 }
 
-.contContainer {
-	margin: 20px;
-	border-radius: 10px;
-	padding: 30px;
+.contContainer{
+    border:0.5px Solid white;
+     margin: 20px;
+    border-radius:10px;
+    padding: 20px;
 }
 
-.contCard {
-	background-color: black;
-	color: white;
-	padding: 30px;
-	text-align: left;
-	border-radius: 10px;
-	display: flex;
-	flex-direction: row;
-	margin: 20px;
+.contCard{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: left;
+    border-radius: 10px;
+    /* display: flex;  */
+    /* flex-direction: row; */
+    margin: 20px;
+    
+    
 }
 
 .contImg {
@@ -43,6 +46,64 @@ body {
 	padding: 20px;
 }
 
+.resCard{
+    border-radius: 20px;
+    display: flex;
+     margin: 20px ;
+    background-color: black ; 
+
+}
+
+
+.contImg{
+    align-items: left;
+    height: 100px;
+    width:100px;
+    display:inline-block;
+}
+
+.cardContent{
+    /* width:100%; */
+    margin: auto;
+    text-align: left;
+    padding: 20px;
+}
+
+.cardButtons{
+    float: right;
+    
+}
+
+.ContListenTitle{
+    color: rgb(248, 200, 109);
+}
+
+.playssButton{
+    background-color:white;
+    text-align: center;
+    border-radius:20%;
+   
+    /* padding:6px 8px; */
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    
+}
+
+.addPlaylist{
+    background-color:white;
+    text-align: center;
+    border-radius:20%;
+
+    height: 40px;
+    width: 40px;
+    /* padding:8px 10px; */
+    display: inline-block;
+    
+}
+
+
+/* 
 .cardButtons {
 	float: right;
 }
@@ -52,7 +113,7 @@ body {
 	text-align: center;
 	border-radius: 20%;
 
-	/* padding:6px 8px; */
+	padding:6px 8px;
 	width: 50px;
 	height: 50px;
 	display: inline-block;
@@ -65,6 +126,6 @@ body {
 
 	height: 50px;
 	width: 50px;
-	/* padding:8px 10px; */
+	padding:8px 10px;
 	display: inline-block;
-}
+} */

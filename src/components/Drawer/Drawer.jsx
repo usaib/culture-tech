@@ -8,6 +8,8 @@ import User from "./man.png";
 import Vendor from "./provision.png";
 import { Home } from "@mui/icons-material";
 import WriteIcon from "@mui/icons-material/RateReview";
+import TourIcon from '@mui/icons-material/Tour';
+import MicIcon from '@mui/icons-material/Mic';
 import TvIcon from "@mui/icons-material/LiveTvSharp";
 import HelpIcon from "@mui/icons-material/HelpOutlineRounded";
 import DirectionsRunIcon from "@mui/icons-material/DirectionsRun";
@@ -38,6 +40,21 @@ const list = [
     icon: DirectionsRunIcon,
     title: "Fitness",
   },
+  {
+    href: "/app/DanceTourism",
+    icon: TourIcon,
+    title: "DanceTourism",
+  },
+  {
+    href: "/DanceTourism",
+    icon: TourIcon,
+    title: "TopDanceTourism",
+  },
+  {
+    href: "/virtualStudio",
+    icon: MicIcon,
+    title: "VirtualStudio",
+  }
 ];
 function DrawerWrapper({ open }) {
   const classes = makeStyles();

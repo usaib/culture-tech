@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import { Homepage } from "./pages/Homepage";
 import Podcasts from "./pages/Podcasts";
 import Documentry from "./pages/Documentry";
+import SeeAll from "./components/SeeAll";
+import SeeAllSubs from "./components/SeeAllSubs";
+import Header from "./components/Header";
+import VirtualStudio from "./components/VirtualStudio";
+import TopDanceTourism from "./components/TopDanceTourism";
+import DanceTourism from "./pages/DanceTourism";
+
+// import SeeAllSubs from "./components/SeeAllSubs";
 import { ThemeProvider } from "@mui/styles";
 import { theme } from "./theme/theme";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -34,6 +42,33 @@ function App() {
                 setData={setData}
                 setCategory={setCategory}
               />
+            }
+          />
+          <Route exact path="/SeeAll" element={<SeeAll />} />
+          <Route exact path="/SeeAllSubs" element={<SeeAllSubs />} />
+          <Route path="app/DanceTourism" element={<DanceTourism />} />
+          <Route
+            path="app/DanceTourism/:category"
+            element={
+              <Documentry
+                setOpen={setOpen}
+                setData={setData}
+                setCategory={setCategory}
+              />
+            }
+          />
+
+          <Route
+            exact
+            path="/virtualStudio"
+            element={
+              <>
+                <Header
+                  title={"VIRTUAL STUDIO"}
+                  image={require("./Images/studio.jpg")}
+                />
+                <VirtualStudio></VirtualStudio>
+              </>
             }
           />
           <Route
