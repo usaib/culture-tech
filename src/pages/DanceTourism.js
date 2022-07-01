@@ -95,7 +95,7 @@ export default function Documentry({ setOpen, setCategory, setData }) {
                       </Typography>
                       <Link
                         className={classes.ctgExp}
-                        to={`/documentary/${doc.category}`}
+                        to={`/app/DanceTourism/${doc.category}`}
                         onClick={() => {
                           sendData(doc.category);
                         }}
